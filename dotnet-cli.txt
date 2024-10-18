@@ -1,0 +1,8 @@
+dotnet new gitignore => inclui arquivo .gitignore para .net
+dotnet -h / dotnet [comando] -h => helper para comandos do dotnet
+
+dotnet new --list => lista modelos de projetos que podem ser criados através do comando "dotnet new"
+
+	dotnet new [nome-curto-modelo] 
+		=> ex: dotnet new sln | cria uma Solution recebendo o nome da pasta por padrão
+		=> ex: dotnet new sln -n MeuNomeProjeto | cria uma Solution passando um nome (MeuNomeProjeto) através da opção -n 
