@@ -3,6 +3,20 @@ dotnet -h / dotnet [comando] -h => helper para comandos do dotnet
 
 dotnet new --list => lista modelos de projetos que podem ser criados através do comando "dotnet new"
 
-	dotnet new [nome-curto-modelo] 
+	dotnet new [nome-curto-modelo] => Cria um tipo de projeto na pasta ao qual o comando está sendo executado
+
 		=> ex: dotnet new sln | cria uma Solution recebendo o nome da pasta por padrão
-		=> ex: dotnet new sln -n MeuNomeProjeto | cria uma Solution passando um nome (MeuNomeProjeto) através da opção -n 
+	
+	opções:
+		-n (name) 	=> ex: dotnet new sln -n MeuNomeProjeto | cria uma Solution passando um nome (MeuNomeProjeto) através da opção -n 
+		-o (output) 	=> ex: dotnet new console -o MeuProjetoConsole | cria a pasta e o projeto dentro da mesma 
+
+
+dotnet sln add [projeto] => inclui projeto existente em uma solution
+
+	sequência:
+
+	dotnet new sln -o MinhaSolutionApp 			=> cria uma pasta chamada "MinhaSolutionApp" com um projeto .sln dentro
+	cd MinhaSolutionApp					=> acessa a pasta
+	dotnet new console -n MinhaConsoleApp			=> cria um projeto console dentro da pasta MinhaSolutionApp
+	dotnet sln add MinhaSolutionApp				=> incluir o projeto Console dentro na Solution
